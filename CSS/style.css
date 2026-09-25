@@ -1,0 +1,32 @@
+.aboutme-social-links {
+  color: black;
+  padding-right: 15px;
+  text-align: center;
+}
+.aboutme-social-links a {
+  color: black;
+  padding-left: 6px;
+  display: inline-block;
+  line-height: 0px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.aboutme-social-links a:hover {
+  color: #f8faf9;
+}
+
+
+
+.aboutme-socialicons {
+  color: black;
+  padding: 10px;
+}
+
+.aboutme-socialicons:hover {
+  color: #f8faf9;
+}
+
+body > * {
+  font-family: 'Passion One', sans-serif;
+}
