@@ -25,6 +25,19 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    #custom-cards .col {
+      max-width: 270px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    #custom-cards .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    #custom-cards .card-text {
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 
@@ -91,16 +104,17 @@
     <h1 class="passion-one-black" style="text-align: center; color: rgb(7, 7, 7);">Local Nashville Bands</h1>
   </div>
 
-<div class="container"> 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+<div class="container px-4 py-5" id="custom-cards">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 align-items-stretch g-4 py-5">  
 
 <div class="col"> 
-    <div class="card shadow-sm"> <img src="../Images/BandLogos/TNDeadlogo.png" alt="Tennessee Dead" class="card-img-top" height="225" width="100%">
-        <div class="card-body bg-dark text-white">
-        <h5 class="card-title">Tennessee Dead</h5> 
+    <div class="card shadow-sm rounded-4 overflow-hidden""> 
+        <div class="card-body bg-black fg-white text-center">
+		<img src="../Images/BandLogos/TNDeadlogo.png" alt="Tennessee Dead" class="img-fluid object-fit-contain w-100 mb-3" style="height: 225px;">	
+        <h3 class="card-title">Tennessee Dead</h3> 
         <p class="card-text"> Jamming on the music of the Grateful Dead since 2016 featuring members such as Jon Mahaffey, Scot Stoffersen, Bobby Frank, and Luke Sands.</p> 
-            <div class="d-flex justify-content-between align-items-center"> 
-                <div class="btn-group"> 
+            <div class="d-flex justify-content-center align-items-center"> 
+                <div class="btn-group btn-group-divider align-items-center">  
                 <a href="https://tndead.com/home" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
                 <a href="https://www.facebook.com/TNDead" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/tennesseedead" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
@@ -392,8 +406,6 @@
 </div> 
 
 </div>
-
-
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 my-4 border-top">
     <div class="col-md-8 d-flex align-items-center">
