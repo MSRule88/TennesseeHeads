@@ -30,3 +30,38 @@
 body > * {
   font-family: 'Passion One', sans-serif;
 }
+.product-card {
+  width: 42%;
+  border: 2px solid #080808;
+  border-radius: 12px;
+  margin: 0 auto 1.5rem auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.border-shakedown {
+  border: 2px solid #080808;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 75%;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
+}
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto 1.5rem auto;
+  width: 90%;
+}
