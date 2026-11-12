@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
@@ -25,6 +25,19 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+    #custom-cards .col {
+      max-width: 270px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    #custom-cards .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    #custom-cards .card-text {
+      font-size: 0.85rem;
+    }
   </style>
 </head>
 
@@ -40,9 +53,9 @@
         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
           
           <li>
-            <a href="./AboutUs.html" class="nav-link aboutme-socialicons"><i class="bi bi-at bi d-block mx-auto mb-1" width="24" height="24"" ></i>
+            <a href="./AboutUs.html" class="nav-link aboutme-socialicons"><i class="bi bi-envelope-at-fill bi d-block mx-auto mb-1" width="24" height="24"" ></i>
                 <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
-              About Us
+              About/Contact Us
             </a>
           </li>
           
@@ -91,23 +104,26 @@
     <h1 class="passion-one-black" style="text-align: center; color: rgb(7, 7, 7);">Local Nashville Bands</h1>
   </div>
 
-<div class="container"> 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+<div class="container px-4 py-5" id="custom-cards">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 align-items-stretch gy-4 py-5">  
 
 <div class="col"> 
-    <div class="card shadow-sm"> <img src="../Images/BandLogos/TNDeadlogo.png" alt="Tennessee Dead" class="card-img-top" height="225" width="100%">
-        <div class="card-body bg-dark text-white">
-        <h5 class="card-title">Tennessee Dead</h5> 
-        <p class="card-text"> Jamming on the music of the Grateful Dead since 2016 featuring members such as Jon Mahaffey, Scot Stoffersen, Bobby Frank, and Luke Sands.</p> 
-            <div class="d-flex justify-content-between align-items-center"> 
-                <div class="btn-group"> 
-                <a href="https://tndead.com/home" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
-                <a href="https://www.facebook.com/TNDead" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/tennesseedead" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
-                </div> 
+    <div class="card shadow-sm rounded-8 overflow-hidden"> 
+        <div class="card-body bg-black fg-white text-center p-0">
+		<img src="../Images/BandLogos/TNDeadlogo.png" alt="Tennessee Dead" class="img-fluid object-fit-contain w-100 m-0 p-0 d-block" style="height: 225px;">	
+        	<div class="p-3">
+				<h3 class="card-title">Tennessee Dead</h3> 
+        		<p class="card-text"> Jamming on the music of the Grateful Dead since 2016 featuring members such as Jon Mahaffey, Scot Stoffersen, Bobby Frank, and Luke Sands.</p> 
+            		<div class="d-flex justify-content-center align-items-center"> 
+                		<div class="btn-group btn-group-divider align-items-center">  
+                			<a href="https://tndead.com/home" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+                			<a href="https://www.facebook.com/TNDead" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+                			<a href="https://www.instagram.com/tennesseedead" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+                		</div> 
 
-            </div> 
-        </div> 
+            		</div> 
+        	</div> 
+		</div>
     </div> 
 </div> 
 
@@ -251,64 +267,147 @@
 </div> 
 
 <div class="col"> 
-<div class="card shadow-sm"> <svg aria-label="Bertha Grateful Drag" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-<title>Bertha Grateful Drag</title>
-<rect width="100%" height="100%" fill="#55595c"></rect>
-<text x="50%" y="50%" fill="#eceeef" dy=".3em">Bertha Grateful Drag</text>
-</svg> 
-<div class="card-body"> 
-<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
-<div class="d-flex justify-content-between align-items-center"> 
-<div class="btn-group"> 
-<button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> 
-</div> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/BerthaLogo.jpg" alt="Bertha Grateful Drag" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Bertha Grateful Drag</h5> 
+		<p class="card-text"> World’s first Grateful Drag band. BERTHA is a collective of queer and allied Nashville musicians.</p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://www.gratefuldrag.com/" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/gratefuldrag" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/gratefuldrag" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.youtube.com/@GratefulDrag" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
 
-</div> 
-</div> 
-</div> 
-</div> 
-
-<div class="col"> 
-<div class="card shadow-sm"> <svg aria-label="Wily" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-<title>Wily</title>
-<rect width="100%" height="100%" fill="#55595c"></rect>
-<text x="50%" y="50%" fill="#eceeef" dy=".3em">Wily</text>
-</svg> 
-<div class="card-body"> 
-<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
-<div class="d-flex justify-content-between align-items-center"> 
-<div class="btn-group"> 
-<button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> 
-</div> 
-
-</div> 
-</div> 
-</div> 
+			</div> 
+		</div> 
+	</div> 
 </div> 
 
 <div class="col"> 
-<div class="card shadow-sm"> <svg aria-label="Ginger Sands" class="bd-placeholder-img card-img-top" height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%" xmlns="http://www.w3.org/2000/svg">
-<title>Ginger Sands</title>
-<rect width="100%" height="100%" fill="#55595c"></rect>
-<text x="50%" y="50%" fill="#eceeef" dy=".3em">Ginger Sands</text>
-</svg> 
-<div class="card-body"> 
-<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
-<div class="d-flex justify-content-between align-items-center"> 
-<div class="btn-group"> 
-<button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/WilyLogo.jpg" alt="Wily" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Wily</h5> 
+		<p class="card-text">Wily is an indie folk/Americana band from Nashville, TN, blending heartfelt lyricism, soaring harmonies, and rootsy instrumentation into songs that uplift as much as they move. </p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://wilyband.com/home" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/Wilybandofficial" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.youtube.com/@wilyband" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
+
+			</div> 
+		</div> 
+	</div> 
 </div> 
 
+<div class="col"> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/GingerSandsLogo.jpg" alt="Ginger Sands" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Ginger Sands</h5> 
+		<p class="card-text">Ginger Sands is a singer and songwriter performing throughout Nashville venues as a solo artist and with her band. </p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://www.gingersands.com/" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/gingersandsmusic/" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/gingersandsmuse/" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				</div> 
+
+			</div> 
+		</div> 
+	</div> 
 </div> 
+
+<div class="col"> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/MizLogo.jpg" alt="Mike Miz" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Mike Miz</h5> 
+		<p class="card-text"> Known for his soulful, high-energy performances and heartfelt songwriting</p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group">
+				<a href="https://www.mikemizmusic.com/" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/mizmusic" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/mikemizmusic" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.youtube.com/user/mikemizwinskimusic" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
+
+			</div> 
+		</div> 
+	</div> 
 </div> 
-</div> 
-</div> 
+
+<div class="col"> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/AlexKent.jpg" alt="Alex Kent Band" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Alex Kent Band</h5> 
+		<p class="card-text"> Alexander Kent is a Nashville-based Americana singer-songwriter known for high-energy acoustic sets with live looping solos and improvisation.</p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://www.facebook.com/alexkentmusic/" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/alexkent.music/" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.youtube.com/@alexkentmusic/videos" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
+
+			</div> 
+		</div> 
+	</div> 
 </div>
 
+<div class="col"> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/SicardHollowLogo.jpg" alt="Sicard Hollow" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Sicard Hollow</h5> 
+		<p class="card-text"> Rooted in bluegrass, raised on the road. Sicard Hollow delivers a high energy live show packed with fast picking, soaring harmonies, and quality songwriting.</p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://www.sicardhollow.com/" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/SicardHollow" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/sicardhollowband/" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.youtube.com/sicardhollow" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
 
+			</div> 
+		</div> 
+	</div> 
+</div> 
+
+<div class="col"> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/TNWarblersLogo.jpg" alt="Tennessee Warblers" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Tennessee Warblers</h5> 
+		<p class="card-text">Americana Jamgrass with an emphasis on folksy harmony & song. </p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://www.tnwarblers.com/" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/tnwarblers" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/tnwarblers/" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.youtube.com/@tnwarblers/" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
+
+			</div> 
+		</div> 
+	</div> 
+</div> 
+
+<div class="col"> 
+	<div class="card shadow-sm"> <img src="../Images/BandLogos/TNWoodpileLogo.jpg" alt="Tennessee Woodpile" class="card-img-top" height="225" width="100%">
+		<div class="card-body bg-dark text-white">
+		<h5 class="card-title">Tennessee Woodpile</h5> 
+		<p class="card-text">A bluegrass band from right outside of Nashville in Franklin, TN. They are rooted in tradition and driven by a love for great stories in song. </p> 
+			<div class="d-flex justify-content-between align-items-center"> 
+				<div class="btn-group"> 
+				<a href="https://www.tennesseewoodpile.com/" class="btn btn-sm btn-outline-light"><i class="bi bi-globe"></i></a>
+				<a href="https://www.facebook.com/tennesseewoodpileband" class="btn btn-sm btn-outline-light"><i class="bi bi-facebook"></i></a>
+				<a href="https://www.instagram.com/tennesseewoodpile/" class="btn btn-sm btn-outline-light"><i class="bi bi-instagram"></i></a>
+				<a href="https://www.youtube.com/tennesseewoodpile" class="btn btn-sm btn-outline-light"><i class="bi bi-youtube"></i></a>
+				</div> 
+
+			</div> 
+		</div> 
+	</div> 
+</div> 
+
+</div>
 
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-5 my-4 border-top">
     <div class="col-md-8 d-flex align-items-center">
