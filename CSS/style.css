@@ -30,6 +30,10 @@
 body > * {
   font-family: 'Passion One', sans-serif;
 }
+.card {
+  margin: 0 auto 1.5rem auto;
+}
+
 .product-card {
   width: 42%;
   border: 2px solid #080808;
@@ -64,4 +68,17 @@ body > * {
   gap: 2rem;
   margin: 0 auto 1.5rem auto;
   width: 90%;
+}
+
+.card-bands {
+  border: 2px solid #080808;
+  border-radius: 12px;
+  margin: 0 auto 1.5rem auto;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-bands {
+  border: 2px solid #080808;
+  border-radius: 12px;
 }
