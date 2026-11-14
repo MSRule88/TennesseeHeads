@@ -38,7 +38,7 @@ body > * {
   width: 42%;
   border: 2px solid #080808;
   border-radius: 12px;
-  margin: 0 auto 1.5rem auto;
+  margin: 1rem auto 1.5rem auto;
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -81,4 +81,14 @@ body > * {
 .button-bands {
   border: 2px solid #080808;
   border-radius: 12px;
+}
+
+.border-shakedown2 {
+  border: 2px solid #fcfbfb;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 75%;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
 }
