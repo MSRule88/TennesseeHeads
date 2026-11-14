@@ -13,6 +13,44 @@
     <title>Gear Shop</title>
 
     <style>
+    /* Responsive carousel: 2 cards side-by-side on desktop, 1 on phones */
+    .gear-carousel {
+      --bs-carousel-items: 2;
+      --bs-carousel-items-gap: 1rem;
+    }
+    @media (max-width: 767.98px) {
+      .gear-carousel {
+        --bs-carousel-items: 1;
+      }
+    }
+
+    /* Fluid cards that fill the slide but never get too wide */
+    .gear-carousel .card-product {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    /* Slide frame height + padding shrink on small screens */
+    .slide-frame {
+      min-height: 320px;
+    }
+    @media (max-width: 767.98px) {
+      .slide-frame {
+        min-height: 0;
+      }
+    }
+
+    /* On phones the image stacks above the text inside the card */
+    @media (max-width: 767.98px) {
+      .card-product .row.g-0 {
+        display: flex;
+        flex-direction: column;
+      }
+      .card-product .col-7 {
+        width: 100%;
+      }
+    }
+
     .card-product .card-img-col {
       display: flex;
       align-items: center;
@@ -24,6 +62,12 @@
       height: auto;
       max-height: 225px;
       object-fit: contain;
+    }
+    @media (max-width: 767.98px) {
+      .card-product .card-img-col img {
+        max-height: none;
+        max-width: 320px;
+      }
     }
     body {
       margin: 0;
@@ -112,7 +156,7 @@
    
 </div> 
 
-<div id="carouselExample" class="carousel carousel-overlay slide border-shakedown" data-bs-ends="loop" style="--bs-carousel-items: 2; --bs-carousel-items-gap: 1rem;">
+<div id="carouselExample" class="carousel carousel-overlay slide border-shakedown gear-carousel">
   <div class="d-flex justify-content-between align-items-center">
     <h2 class="mb-0">Festival and Camping Gear</h2>
 		<div class="carousel-overlay-controls">
@@ -131,8 +175,8 @@
 	</div>
 	<div class="carousel-inner rounded-5">
 		<div class="carousel-item active">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/2seaterchair.png" class="img-fluid" alt="CAMPING LOVE SEAT">
@@ -153,8 +197,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/tentstringlight.png" class="img-fluid" alt="GUY-LINE LIGHTS">
@@ -175,8 +219,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/outdoorblanket.png" class="img-fluid" alt="PICNIC BLANKET">
@@ -197,8 +241,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/mosquitobracelet.png" class="img-fluid" alt="MOSQUITO REPELLENT BRACELETS">
@@ -219,8 +263,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/Purplemandelablanket.png" class="img-fluid" alt="Purplemandelablanket">
@@ -241,8 +285,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/blueandpinkmandelablanket.png" class="img-fluid" alt="blueandpinkmandelablanket">
@@ -263,8 +307,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/campstringlights.png" class="img-fluid" alt="campstringlights">
@@ -285,8 +329,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/camptable.png" class="img-fluid" alt="camptable">
@@ -307,8 +351,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/kootekhammock.png" class="img-fluid" alt="FANNY PACK">
@@ -329,8 +373,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/chiheehammock.png" class="img-fluid" alt="FANNY PACK">
@@ -351,8 +395,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/campcookset.png" class="img-fluid" alt="FANNY PACK">
@@ -373,8 +417,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/ohovivcharger.png" class="img-fluid" alt="FANNY PACK">
@@ -395,8 +439,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/powerstation.png" class="img-fluid" alt="powerstation">
@@ -418,8 +462,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/camplightstand.png" class="img-fluid" alt="FANNY PACK">
@@ -440,8 +484,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/magnetichooks.png" class="img-fluid" alt="magnetichooks">
@@ -462,8 +506,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/TDblackgloves.png" class="img-fluid" alt="FANNY PACK">
@@ -484,8 +528,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/HKQblackgloves.png" class="img-fluid" alt="HKQblackgloves">
@@ -506,8 +550,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/tabletopfirepit.png" class="img-fluid" alt="FANNY PACK">
@@ -528,8 +572,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/camptorch.png" class="img-fluid" alt="FANNY PACK">
@@ -550,8 +594,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/inflatablecouch.png" class="img-fluid" alt="inflatablecouch">
@@ -572,8 +616,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/10x10popuptent.png" class="img-fluid" alt="10x10popuptent">
@@ -596,7 +640,7 @@
   </div>
 </div>  
 
-<div id="carouselExample1" class="carousel carousel-overlay slide border-shakedown" data-bs-ends="loop" style="--bs-carousel-items: 2; --bs-carousel-items-gap: 1rem;">
+<div id="carouselExample1" class="carousel carousel-overlay slide border-shakedown gear-carousel">
   <div class="d-flex justify-content-between align-items-center">
     <h2 class="mb-0">Festival and Concert Essentials</h2>
 		<div class="carousel-overlay-controls">
@@ -615,8 +659,8 @@
 	</div>
 	<div class="carousel-inner rounded-5">
 		<div class="carousel-item active">
-			<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-			  <div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+			<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+			  <div class="card shadow-sm rounded-8 overflow-hidden card-product">
           <div class="row g-0">
             <div class="col-5 card-img-col">
               <img src="../../Images/GearShop/LoopEarPlugs.png" class="img-fluid" alt="Loop Switch 2 Adjustable Ear Plugs">
@@ -636,8 +680,8 @@
       </div>
 		</div>
 		<div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GlitterPatches.png" class="img-fluid" alt="Glitter Freckles">
@@ -658,8 +702,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/ClearFannyPack.png" class="img-fluid" alt="FANNY PACK">
@@ -680,8 +724,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/coolingshaw.png" class="img-fluid" alt="COOLING SHAWL">
@@ -702,8 +746,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/festivefan.png" class="img-fluid" alt="GLOW RAVE FAN">
@@ -724,8 +768,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/ravefan.png" class="img-fluid" alt="FOLDING HAND FAN">
@@ -746,8 +790,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/flyingdisc.png" class="img-fluid" alt="FANNY PACK">
@@ -768,8 +812,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/blackreflectiverainsuit.png" class="img-fluid" alt="blackreflectiverainsuit">
@@ -790,8 +834,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/blueprorainsuit.png" class="img-fluid" alt="blueprorainsuit">
@@ -812,8 +856,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/greybasicrainsuit.png" class="img-fluid" alt="greybasicrainsuit">
@@ -834,8 +878,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/blackbasicrainsuit.png" class="img-fluid" alt="blackbasicrainsuit">
@@ -856,8 +900,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/backpackcooler.png" class="img-fluid" alt="backpackcooler">
@@ -878,8 +922,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDfurbuckethat.png" class="img-fluid" alt="GDfurbuckethat">
@@ -901,7 +945,7 @@
   </div>
 </div> 
 
-<div id="carouselExample2" class="carousel carousel-overlay slide border-shakedown" data-bs-ends="loop" style="--bs-carousel-items: 2; --bs-carousel-items-gap: 1rem;">
+<div id="carouselExample2" class="carousel carousel-overlay slide border-shakedown gear-carousel">
   <div class="d-flex justify-content-between align-items-center">
     <h2 class="mb-0">Tie-dye and Clothing</h2>
 		<div class="carousel-overlay-controls">
@@ -920,8 +964,8 @@
 	</div>
 	<div class="carousel-inner rounded-5">
 		<div class="carousel-item active">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/Trippytracksuit.png" class="img-fluid" alt="Trippytracksuit">
@@ -942,8 +986,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/trippylongsleeveshirt.png" class="img-fluid" alt="trippylongsleeveshirt">
@@ -964,8 +1008,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/lightningswimshoes.png" class="img-fluid" alt="WATER SHOES - LIGHTNING">
@@ -986,8 +1030,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/starmoonpinkswimshoes.png" class="img-fluid" alt="WATER SHOES - STAR MOON PINK">
@@ -1008,8 +1052,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/sunsetswimshoes.png" class="img-fluid" alt="WATER SHOES - SUNSET">
@@ -1030,8 +1074,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/blackswimshoes.png" class="img-fluid" alt="WATER SHOES - BLACK">
@@ -1052,8 +1096,8 @@
 </div> 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/LBberthatshirt.png" class="img-fluid" alt="LBberthatshirt">
@@ -1074,8 +1118,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDbeaniehatgrey.png" class="img-fluid" alt="GDbeaniehatgrey">
@@ -1096,8 +1140,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDpinktshirt.png" class="img-fluid" alt="FANNY PACK">
@@ -1118,8 +1162,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/stealiehatgray.png" class="img-fluid" alt="stealiehatgray">
@@ -1140,8 +1184,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDRipplepants.png" class="img-fluid" alt="FANNY PACK">
@@ -1163,7 +1207,7 @@
   </div>
 </div> 
 
-<div id="carouselExample3" class="carousel carousel-overlay slide border-shakedown" data-bs-ends="loop" style="--bs-carousel-items: 2; --bs-carousel-items-gap: 1rem;">
+<div id="carouselExample3" class="carousel carousel-overlay slide border-shakedown gear-carousel">
   <div class="d-flex justify-content-between align-items-center">
     <h2 class="mb-0">Art and Collectibles</h2>
 		<div class="carousel-overlay-controls">
@@ -1182,8 +1226,8 @@
 	</div>
 	<div class="carousel-inner rounded-5">
 		<div class="carousel-item active">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDcalendar.png" class="img-fluid" alt="FANNY PACK">
@@ -1204,8 +1248,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/MAGAbumpersticker.png" class="img-fluid" alt="MAGAbumpersticker">
@@ -1226,8 +1270,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDscarletfiretapestry.png" class="img-fluid" alt="FANNY PACK">
@@ -1248,8 +1292,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDbutterflytapestry.png" class="img-fluid" alt="GDbutterflytapestry">
@@ -1271,8 +1315,8 @@
 
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDcarbadge.png" class="img-fluid" alt="GDcarbadge">
@@ -1293,8 +1337,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDstickers.png" class="img-fluid" alt="GDstickers">
@@ -1316,7 +1360,7 @@
   </div>
 </div>  
 
-<div id="carouselExample4" class="carousel carousel-overlay slide border-shakedown" data-bs-ends="loop" style="--bs-carousel-items: 2; --bs-carousel-items-gap: 1rem;">
+<div id="carouselExample4" class="carousel carousel-overlay slide border-shakedown gear-carousel">
   <div class="d-flex justify-content-between align-items-center">
     <h2 class="mb-0"> Music and Entertainment</h2>
 		<div class="carousel-overlay-controls">
@@ -1335,8 +1379,8 @@
 	</div>
 	<div class="carousel-inner rounded-5">
 		<div class="carousel-item active">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDlyricsbook.png" class="img-fluid" alt="GDlyricsbook">
@@ -1357,8 +1401,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/GDdvdcollection.png" class="img-fluid" alt="GDdvdcollection">
@@ -1379,8 +1423,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/SSTbook.png" class="img-fluid" alt="SSTbook">
@@ -1401,8 +1445,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/PhilLeshbook.png" class="img-fluid" alt="PhilLeshbook">
@@ -1423,8 +1467,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/shakedownLP.png" class="img-fluid" alt="shakedownLP">
@@ -1445,8 +1489,8 @@
 </div>
 
 <div class="carousel-item">
-	<div class="d-flex flex-column justify-content-center bg-subtle-primary p-9 bg-1 rounded-5" style="min-height: 320px;">
-		<div class="card shadow-sm rounded-8 overflow-hidden card-product" style="max-width: 540px;">
+	<div class="d-flex flex-column justify-content-center bg-subtle-primary slide-frame rounded-5" style="min-height: 320px;">
+		<div class="card shadow-sm rounded-8 overflow-hidden card-product">
 			<div class="row g-0">
 				<div class="col-5 card-img-col">
 					<img src="../../Images/GearShop/TerripinstationLP.png" class="img-fluid" alt="TerripinstationLP">
@@ -1488,18 +1532,17 @@
  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script> 
  <script>
    document.addEventListener('DOMContentLoaded', function () {
-     const el = document.getElementById('carouselExample');
-     const viewport = el.querySelector('.carousel-inner');
-     const items = Array.from(el.querySelectorAll('.carousel-item'));
-     const nextBtn = el.querySelector('[data-bs-slide="next"]');
+     // Loop every gear-shop carousel back to the start when Next is pressed on the last item
+     document.querySelectorAll('.gear-carousel').forEach(function (carouselEl) {
+       const viewport = carouselEl.querySelector('.carousel-inner');
+       const nextBtn = carouselEl.querySelector('[data-bs-slide="next"]');
 
-     nextBtn.addEventListener('click', function () {
-       // If the viewport is already scrolled to the very end, loop back to the start
-       const atEnd = viewport.scrollLeft + viewport.clientWidth >= viewport.scrollWidth - 5;
-       if (atEnd) {
-         viewport.scrollTo({ left: 0, behavior: 'smooth' });
-       }
-       // Otherwise the built-in Bootstrap handler advances normally
+       nextBtn.addEventListener('click', function () {
+         const atEnd = viewport.scrollLeft + viewport.clientWidth >= viewport.scrollWidth - 5;
+         if (atEnd) {
+           viewport.scrollTo({ left: 0, behavior: 'smooth' });
+         }
+       });
      });
    });
  </script>
