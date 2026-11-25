@@ -92,3 +92,8 @@ body > * {
   height: auto;
   margin: 0 auto 1.5rem auto;
 }
+
+.button-bands2 {
+  border: 2px solid #080808;
+  border-radius: 35px;
+}
