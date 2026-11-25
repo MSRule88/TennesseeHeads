@@ -97,3 +97,14 @@ body > * {
   border: 2px solid #080808;
   border-radius: 35px;
 }
+
+.button-bandsW {
+  border: 2px solid #ffffff;
+  border-radius: 35px;
+}
+
+.button-bandsW2 {
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+   color: #ffffff;
+}
