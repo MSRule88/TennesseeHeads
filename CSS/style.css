@@ -108,3 +108,24 @@ body > * {
   border-radius: 12px;
    color: #ffffff;
 }
+
+.button-bandsG {
+  border: 2px solid #04923a;
+  border-radius: 12px;
+   color: #ffffff;
+}
+
+.button-bandsG2 {
+  border: 2px solid #04923a;
+  border-radius: 35px;
+}
+
+.border-shakedownG {
+  border: 2px solid #04923a;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 75%;
+  height: auto;
+  margin: 0 auto 1.5rem auto;
+}
